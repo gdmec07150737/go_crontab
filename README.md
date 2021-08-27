@@ -1,6 +1,6 @@
-#Go分布式Crontab
+# Go分布式Crontab
 
-##master
+## master
 ~~编译：go build~~ 
 
 编译后的二进制文件： ./master/main/main
@@ -22,7 +22,7 @@
 http://localhost:8070/
 )
 
-##worker
+## worker
 ~~编译：go build~~
 
 编译后的二进制文件： ./worker/main/main
