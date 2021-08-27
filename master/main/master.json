@@ -1,0 +1,25 @@
+{
+  "API接口服务端口" :"提供增删改查服务的端口",
+  "apiPort" : 8070,
+
+  "API接口读超时" : "单位是毫秒",
+  "apiReadTimeOut" : 5000,
+
+  "API接口写超时" : "单位是毫秒",
+  "apiWriteTimeOut" : 5000,
+
+  "etcd的集群地址" : "配置多个，避免单点故障",
+  "etcdEndpoints" : ["127.0.0.1:2379"],
+
+  "etcd的链接超时" : "单位是毫秒",
+  "etcdDialTimeout" : 5000,
+
+  "web页面根目录" : "静态页面，前后端分离",
+  "webroot" : "./webroot",
+
+  "mongodb地址" : "采用mongodb地址",
+  "mongodbUrl" : "mongodb://127.0.0.1:27017",
+
+  "mongodb链接超时时间" : "单位为毫秒",
+  "mongodbConnectTimeout" : 5000
+}
