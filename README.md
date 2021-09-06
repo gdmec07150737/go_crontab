@@ -1,6 +1,7 @@
 # Go分布式Crontab
 
-## master
+## 原生编译执行方式
+### master
 ~~编译：go build~~ 
 
 编译后的二进制文件： ./master/main/main
@@ -22,7 +23,7 @@
 http://localhost:8070/
 )
 
-## worker
+### worker
 ~~编译：go build~~
 
 编译后的二进制文件： ./worker/main/main
@@ -36,4 +37,15 @@ http://localhost:8070/
 执行运行master命令
 ```shell script    
     ./main -config ./worker.json
+```
+
+---
+
+## Docker方式
+
+运行容器：
+```shell script
+docker-compose up
+
+docker exec -it go_master_crontab ./go_crontab_worker
 ```

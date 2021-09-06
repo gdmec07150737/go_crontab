@@ -1,0 +1,43 @@
+version: "3.8"
+services:
+  go_master_crontab:
+    container_name: go_master_crontab
+    image: pgcc/go_master_crontab:1.0.1
+    ports:
+      - "8070:8070"
+    networks:
+      - go_crontab_default
+    depends_on:
+      - etcd
+      - mongodb
+
+  etcd:
+    container_name: etcd
+    image: bitnami/etcd:3
+    ports:
+      - "2379:2379"
+    volumes:
+      - "etcd_data:/bitnami/etcd"
+    environment:
+      - "ALLOW_NONE_AUTHENTICATION=yes"
+    networks:
+      - go_crontab_default
+
+  mongodb:
+    container_name: zxlmongodb
+    image: mongo:3.0.6
+    ports:
+      - "27017:27017"
+    volumes:
+      - "/Volumes/mongodb/db:/data/db"
+    tty: true
+    networks:
+      - go_crontab_default
+
+networks:
+  go_crontab_default:
+    driver: bridge
+
+volumes:
+  etcd_data:
+    driver: local
