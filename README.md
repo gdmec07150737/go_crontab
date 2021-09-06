@@ -49,3 +49,7 @@ docker-compose up
 
 docker exec -it go_master_crontab ./go_crontab_worker
 ```
+
+[浏览器访问管理后台http://localhost:8070/](
+http://localhost:8070/
+)
